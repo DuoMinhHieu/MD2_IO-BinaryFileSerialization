@@ -7,14 +7,14 @@ public class ProductManagement {
     public ProductManagement() {
     }
 
-    public ProductManagement(String maSanPham, String tenSanPham, double gia, String hangSanXuat) {
+    public ProductManagement(String maSP, String tenSP, double gia, String hangSanXuat) {
         this.maSP = maSP;
         this.tenSP = tenSP;
         this.gia = gia;
         this.hangSanXuat = hangSanXuat;
     }
 
-    public String getMaSanPham() {
+    public String getMaSP() {
         return maSP;
     }
 

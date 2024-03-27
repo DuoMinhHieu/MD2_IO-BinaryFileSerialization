@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 import java.io.*;
 public class Main {
-    public void save(String path, ArrayList<Product> list) throws IOException {
+    public void save(String path, ArrayList<ProductManagement> list) throws IOException {
         DataOutputStream dos = new DataOutputStream(new FileOutputStream(path));
         dos.writeInt(list.size());
-        for (Product i : list) {
-            dos.writeUTF(i.getMaSanPham());
-            dos.writeUTF(i.getTenSanPham());
+        for (ProductManagement i : list) {
+            dos.writeUTF(i.getMaSP());
+            dos.writeUTF(i.getTenSP());
             dos.writeDouble(i.getGia());
             dos.writeUTF(i.getHangSanXuat());
         }
         dos.close();
     }
-    public ArrayList<Product> load (String path) throws IOException {
-        ArrayList<Product> list = new ArrayList<>();
+    public ArrayList<ProductManagement> load (String path) throws IOException {
+        ArrayList<ProductManagement> list = new ArrayList<>();
         File file = new File(path);
         if (!file.exists()) {
             return null;
@@ -25,16 +25,16 @@ public class Main {
             String product_name = dis.readUTF();
             double product_price = dis.readDouble();
             String product_brand = dis.readUTF();
-            Product product = new Product(product_id,product_name,product_price,product_brand);
+            ProductManagement product = new ProductManagement(product_id,product_name,product_price,product_brand);
             list.add(product);
         }
         return list;
     }
     public static void main(String[] args) throws IOException {
-        ArrayList<Product> list = new ArrayList<>();
-        Product s1 = new Product("1","Tivi",1000,"Sony");
-        Product s2 = new Product("2","MayGiat",1000,"LG");
-        Product s3 = new Product("3","TuLanh",1000,"Hitachi");
+        ArrayList<ProductManagement> list = new ArrayList<>();
+        ProductManagement s1 = new ProductManagement("1","Tivi",1000,"Sony");
+        ProductManagement s2 = new ProductManagement("2","MayGiat",1000,"LG");
+        ProductManagement s3 = new ProductManagement("3","TuLanh",1000,"Hitachi");
         list.add(s1);
         list.add(s2);
         list.add(s3);
