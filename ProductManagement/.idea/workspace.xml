@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="268a0379-5e0c-4ff8-812c-967e6f7f0b1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rescache" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rescache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/manager/ManagerProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rescache" beforeDir="false" afterPath="$PROJECT_DIR$/.rescache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductManagement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <workItem from="1711445003962" duration="655000" />
       <workItem from="1711531891433" duration="3297000" />
       <workItem from="1711559233147" duration="917000" />
-      <workItem from="1711590637195" duration="1991000" />
+      <workItem from="1711590637195" duration="5592000" />
     </task>
     <servers />
   </component>
