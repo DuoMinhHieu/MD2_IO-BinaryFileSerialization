@@ -14,6 +14,9 @@ public class ProductManagement {
         this.hangSanXuat = hangSanXuat;
     }
 
+    public ProductManagement(int productId, String productName, double price, String brand) {
+    }
+
     public String getMaSP() {
         return maSP;
     }

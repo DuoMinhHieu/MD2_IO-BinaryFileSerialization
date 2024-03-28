@@ -1,8 +1,10 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.io.*;
 public class Main {
     public void save(String path, ArrayList<ProductManagement> list) throws IOException {
-        DataOutputStream dos = new DataOutputStream(new FileOutputStream(path));
+        DataOutputStream dos = new DataOutputStream(Files.newOutputStream(Paths.get(path)));
         dos.writeInt(list.size());
         for (ProductManagement i : list) {
             dos.writeUTF(i.getMaSP());
@@ -18,7 +20,7 @@ public class Main {
         if (!file.exists()) {
             return null;
         }
-        DataInputStream dis = new DataInputStream(new FileInputStream(path));
+        DataInputStream dis = new DataInputStream(Files.newInputStream(Paths.get(path)));
         int numberProduct = dis.readInt();
         for (int i = 0; i < numberProduct; i++) {
             String product_id = dis.readUTF();
@@ -32,9 +34,9 @@ public class Main {
     }
     public static void main(String[] args) throws IOException {
         ArrayList<ProductManagement> list = new ArrayList<>();
-        ProductManagement s1 = new ProductManagement("1","Tivi",1000,"Sony");
-        ProductManagement s2 = new ProductManagement("2","MayGiat",1000,"LG");
-        ProductManagement s3 = new ProductManagement("3","TuLanh",1000,"Hitachi");
+        ProductManagement s1 = new ProductManagement("1","DuaMuoi",10000,"HieuHaHa");
+        ProductManagement s2 = new ProductManagement("2","CaMuoi",15000,"HieuHeHe");
+        ProductManagement s3 = new ProductManagement("3","SungMuoi",20000,"HieuHuHu");
         list.add(s1);
         list.add(s2);
         list.add(s3);
